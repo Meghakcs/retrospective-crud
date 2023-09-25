@@ -1,0 +1,20 @@
+<a routerLink = "/"> < back </a>
+
+<h2>
+  Add New Product
+</h2>
+
+<form id = "formNewProduct" name = "formNewProduct" #productData = "ngForm" (ngSubmit) = "addNewProduct(productData.value)">
+  <label>Description: </label><input type = "text" name="description" id="description" placeholder="description" ngModel><br>
+  <label>Category: </label><input type = "text" name="category" id="category" placeholder="category" ngModel><br>
+  <label>Option</label><select id = "option" name="option" ngModel placeholder="Product can expire ">
+    <option value="1">True</option>
+    <option value="2">False</option>
+  </select><br>
+  <label>Expiry Date: </label><input type = "date" name="expire" id="expire" placeholder="expire" ngModel><br>
+  <label>Price: </label><input type = "text" name="price" id="price" placeholder="price" ngModel><br>
+  <input type="submit" value = "Add Product">
+</form>
+
+<br>
+<h3 *ngIf = "isAdded" >{{confirmationString}}</h3>

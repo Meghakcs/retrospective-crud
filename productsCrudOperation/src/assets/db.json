@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "description": "Vegetables Category",
+      "option": "true",
+      "expiry_date": "23:09:2023",
+      "category": "vegetables",
+      "price": 25,
+      "special": true
+    },
+    {
+      "id": 2,
+      "description": "Fruits Category",
+      "option": "true",
+      "expiry_date": "23:09:2023",
+      "category": "fruits",
+      "price": 50,
+      "special": true
+    },
+    {
+      "description": "fsdf",
+      "category": "fsgg",
+      "price": "37",
+      "option": "1",
+      "expire": "234",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

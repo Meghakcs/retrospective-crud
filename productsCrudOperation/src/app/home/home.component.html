@@ -1,0 +1,28 @@
+<h1>Product Crud Operations</h1>
+<a routerLink = '/product'> + Add Product</a>
+<h1>
+  Products
+</h1>
+
+
+<table>
+  <th>ID</th>
+  <th>Description</th>
+  <th>Option</th>
+  <th>Expiry Date</th>
+  <th>Category</th>
+  <th>Price</th>
+  <th>Special</th>
+  <tr *ngFor = "let product of productList">
+    <td>{{product.id}}</td>
+    <td>{{product.description}}</td>
+    <td>{{product.option}}</td>
+    <td>{{product.expiry_date}}</td>
+    <td>{{product.category}}</td>
+    <td>{{product.price}}</td>
+    <td> <input checked={{product.special}} type="checkbox"/></td>
+    <button class="btn btn-danger" (click) = "deleteProduct(product.id)"><a>DELETE</a></button>
+    <td [routerLink] = "['/updateProduct', product.id]"><a>UPDATE</a></td>
+  </tr>
+</table>
+

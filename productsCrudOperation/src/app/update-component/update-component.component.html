@@ -1,0 +1,20 @@
+<h2>
+  Update Product
+</h2>
+
+<p *ngIf = "!exist">
+  Product doesn't exist
+</p>
+
+<form id = "formNewProduct" name = "formNewProduct" #productData = "ngForm" (ngSubmit) = "updateProduct(productData.value)">
+
+  <label>Description: </label><input type = "text" name="description" id="description" placeholder="description" [(ngModel)] = "data.description" ngModel><br>
+  <label>Category: </label><input type = "text" name="category" id="category" placeholder="category" [(ngModel)] = "data.category" ngModel><br>
+  <label>Option</label><select id = "option" name="option" [(ngModel)] = "data.option" ngModel placeholder="Product can expire ">
+    <option value="1">True</option>
+    <option value="2">False</option>
+  </select><br>
+  <label>Expiry Date: </label><input type = "date" name="expire" id="expire" [(ngModel)] = "data.expire" placeholder="expire" ngModel><br>
+  <label>Price: </label><input type = "text" name="price" id="price" placeholder="price" [(ngModel)] = "data.price" ngModel><br>
+  <input type="submit" value = "Update Product">
+</form>
